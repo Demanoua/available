@@ -1,1 +1,78 @@
-Hello word
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Scraping Specialist</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 id="name">Scraping Specialist</h1>
+      <button id="theme-toggle" aria-label="Basculer thème">🌙</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero">
+      <div class="left">
+        <h2 id="headline">Je transforme des données brutes en insights exploitables</h2>
+        <p id="summary"></p>
+        <a id="contact-btn" class="btn" href="#contact">Contactez-moi</a>
+      </div>
+      <div class="right" id="hero-right">
+        <img id="avatar" src="assets/images/avatar.png" alt="Photo" />
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h3>Compétences clés</h3>
+      <div id="skills-list" class="chips"></div>
+    </section>
+
+    <section id="services" class="card">
+      <h3>Services</h3>
+      <div id="services-list" class="grid"></div>
+    </section>
+
+    <section id="projects" class="card">
+      <h3>Projets</h3>
+      <div class="controls">
+        <input id="project-filter" placeholder="Filtrer par technologie (ex: Selenium)" />
+      </div>
+      <div id="projects-list" class="grid"></div>
+    </section>
+
+    <section id="analytics" class="card">
+      <h3>Exemples d'analyse</h3>
+      <div id="chart" style="height:360px;"></div>
+    </section>
+
+    <section id="testimonials" class="card">
+      <h3>Témoignages</h3>
+      <div id="testimonials-list" class="list"></div>
+    </section>
+
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <form id="contact-form" action="https://formspree.io/f/yourformid" method="POST">
+        <label>Nom<input name="name" required /></label>
+        <label>Email<input name="email" type="email" required /></label>
+        <label>Message<textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Scraping Specialist — Built for GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
